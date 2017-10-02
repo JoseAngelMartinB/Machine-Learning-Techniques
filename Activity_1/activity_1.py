@@ -6,7 +6,6 @@ Created on Wed Sep 27 18:30:21 2017
 """
 
 import codecs
-import time
 import sys
 import numpy as np
 from numpy import corrcoef, transpose, arange
@@ -35,8 +34,7 @@ try:
             if row[0] == "sj":
                 if int(row[1])>=1990 and int(row[1])<=1996:
                     if row != []:
-                        row.pop(0)
-                        row[2] = int(time.mktime(time.strptime(row[2], '%Y-%m-%d')))
+                        row = row[4:]
                         cases.append(map(float, row))
         count += 1
     f.close()
@@ -50,8 +48,8 @@ except:
 R = corrcoef(transpose(cases))
 pcolor(R)
 colorbar()
-yticks(arange(0,24),range(0,24))
-xticks(arange(0,24),range(0,24))
+yticks(arange(0,20),range(0,20))
+xticks(arange(0,20),range(0,20))
 show()
 
 # Generate a mask for the upper triangle
@@ -66,7 +64,7 @@ f, ax = plt.subplots(figsize=(11, 9))
 cmap = sns.diverging_palette(200, 10, as_cmap=True)
 
 # Draw the heatmap with the mask and correct aspect ratio
-sns.heatmap(R, mask=mask, cmap=cmap, vmax=.8,
+sns.heatmap(R, mask=mask, cmap=cmap, vmax=1,
             square=True, xticklabels=2, yticklabels=2,
             linewidths=.5, cbar_kws={"shrink": .5}, ax=ax)
 
@@ -83,12 +81,12 @@ X_pca = estimator.fit_transform(cases)
 print(estimator.explained_variance_ratio_) 
 
 #Plot 
-numbers = numpy.arange(len(X_pca))
+numbers = np.arange(len(X_pca))
 fig, ax = plt.subplots()
 for i in range(len(X_pca)):
     plt.text(X_pca[i][0], X_pca[i][1], numbers[i] + 2) # + 2 para que coincida con la línea del fichero
-plt.xlim(-0.75, 1)
-plt.ylim(-1, 1.5)
+plt.xlim(-0.75, 3.2)
+plt.ylim(-0.75, 1)
 ax.grid(True)
 fig.tight_layout()
 plt.show()
