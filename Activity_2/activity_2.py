@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Sep 27 18:30:21 2017
+Created on Wed Oct 4 2017
 
 @author: José Ángel Martín Baos, Oscar Pérez Galán, Miguel Ampuero 
 López-Sepúlveda
@@ -65,7 +65,7 @@ n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
 print('Estimated number of clusters: %d' % n_clusters_)
      
 
-for c in range(1,n_clusters_):
+for c in range(1,n_clusters_+1):
     s = ''
     print 'Group', c
     for i in range(len(cases[0])):

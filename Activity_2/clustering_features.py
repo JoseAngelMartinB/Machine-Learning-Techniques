@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Sep 27 18:30:21 2017
+Created on Wed Oct 4 2017
 
 @author: José Ángel Martín Baos, Oscar Pérez Galán, Miguel Ampuero 
 López-Sepúlveda
