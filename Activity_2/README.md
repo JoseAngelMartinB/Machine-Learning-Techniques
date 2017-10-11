@@ -49,3 +49,8 @@ have high precipitation values.
 ## 4. Execute the hierarchical clustering algorithm using feature as elements
 In order to carry out this task, [clustering_features.py](clustering_features.py)
 has been developed. 
+
+We can visualize 5 different clusters on the image (numbered 1-5 from left to right). Before talking about each cluster, it is remarkable that the 4 and the 5 cluster has more relation between them in comparison to the others clusters. 
+Also it is remarkable how there are two different clusters (on the opposite part of the graph) that both of them measures temperatures. One of the main reasons that this can occur is becuase the number one is measured in kelvin and the cluster number 5 is measured in celsius degrees. 
+
+The cluster 3 makes sense becuase all the precipitacion data is gathered. Another remarkable aspect is that the relative humidity feature is isolated, it is alone in the second cluster. Finally, the Satellite veggetation is gathered in one cluster (the number four). 
