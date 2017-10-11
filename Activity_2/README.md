@@ -41,7 +41,7 @@ into bigger clusters. The final cluster list is:
 such as ndvi\_ne, ndvi\_nw, ndvi\_se and ndvi\_sw.
 * Cluster C (Group 4, 5 and 6): They are related because of some features such as: ndvi\_se,
 ndvi\_sw.
-* Cluster D (Group 7, 8, 9, 10 and 11): 
+* Cluster D (Group 7, 8, 9, 10 and 11): Nothing relevant has been found. 
 * Cluster E (Group 12, 13, 14): This cluster is very different to the other ones because they
 have high precipitation values.
 
