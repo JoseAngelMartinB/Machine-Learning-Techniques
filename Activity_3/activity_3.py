@@ -17,6 +17,7 @@ from sklearn import preprocessing
 import sklearn.neighbors
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
+from sklearn import metrics
 
 def plotdata(data,labels,name): #def function plotdata
     fig, ax = plt.subplots()
@@ -69,7 +70,6 @@ plotdata(X_pca,labels,'basic')
 
 
 ### 4. Setting parameters
-k = 4
 init = "random"
 iterations = 10 # to run 10 times with different random centroids to choose the final model as the one with the lowest SSE
 max_iter = 300 # maximum number of iterations for each single run
@@ -77,11 +77,38 @@ tol = 1e-04 # controls the tolerance with regard to the changes in the within-cl
 random_state = 0 # random
 
 
-### 5. Execute clustering 
+### 5. Find the best value for k
+silhouettes = []
+
+for i in range(2, 14):
+    km = KMeans(i, init, n_init = iterations ,max_iter= max_iter, tol = tol,random_state = random_state)
+    labels = km.fit_predict(norm_cases)
+    silhouettes.append(metrics.silhouette_score(norm_cases, labels))
+
+# Plot Silhouette
+plt.plot(range(2,14), silhouettes , marker='o')
+plt.xlabel('Number of clusters')
+plt.ylabel('Silhouette')
+plt.show()
+      
+# Set K value
+k = 2
+
+
+### 6. Execute clustering 
 km = KMeans(k, init, n_init = iterations ,max_iter= max_iter, tol = tol,random_state = random_state)
 labels = km.fit_predict(norm_cases)
 
 
-### 6. Plot the results
+### 7. Plot the results
 plotdata(X_pca,labels, init)
+
+for c in range(0,k):
+    s = ''
+    print 'Group', c + 1
+    for i in range(len(cases[0])):
+        column = [row[i] for j,row in enumerate(cases) if labels[j] == c]
+        if len(column) != 0:
+            s = "%s,%s" % (s,numpy.mean(column))
+    print s
 
