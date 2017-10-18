@@ -1,4 +1,4 @@
-# Activity 3. Principal Component Analysis
+# Activity 3. K-means
 
 ## 1. Load and normalize the data assigned
 Observing the data file, we have decided to obtain the necessary data from it 
