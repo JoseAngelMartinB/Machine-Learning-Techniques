@@ -21,7 +21,7 @@ from sklearn import preprocessing
 
 ### 1. Load the data asigned
 try:
-    f = codecs.open("dengue_features_train.csv", "r", "utf-8")
+    f = codecs.open("../Data/dengue_features_train.csv", "r", "utf-8")
     cases = []
     count = 0
     for line in f:

@@ -13,8 +13,8 @@ features.
 
 
 ## 2. Extract the correlation among features
-Features 4 and 12. The feature 4 is the 'precipitation_amt_mm' that is the 
-total precipitation measured by PERSIANN. This one has correlation coefficient 
+The feature 4 is the 'precipitation_amt_mm' wich is the 
+total precipitation measured by PERSIANN satellite. This one has correlation coefficient 
 of 1 with feature 12 that is the total precipitation measured by the NOAA's 
 NCEP Climate Forecast System Reanalysis. 
 
@@ -24,6 +24,7 @@ mean dew point temperature, maximum air temperature and minimum air temperature
 respectively. All these features are measured by the NOAA's NCEP System and has 
 in common that are temperatures and by consequence the correlation coefficient 
 is one.
+![Correlation among features](Images/correlation.png)
 
 
 ## 3. Execute PCA and plot the results
@@ -39,3 +40,4 @@ Once the PCA has been executed, the results has been plotted. There, two
 outliers can be clearly observed. They correspond with the rows 141 and 89 of
 the data file. This is due to the fact that they do not have enough features
 (maybe due to a bad data recopilation).
+![PCA results](Images/PCA.png)
