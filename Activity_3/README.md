@@ -13,9 +13,13 @@ features. This rows has been removed. For that reason, the total number of eleme
 in the data set 345. Then, the data has been normalize using 
 the MinMaxScaler of skylearn preprocessing package.
 
+The data assigned without outliers can be plotted after executing the PCA in order to see it clearly in two dimensions:
+![Assigned data](Images/elements.png)
+
 
 ## 2. Find the best value for k
 It has been calculated the silhouette coefficient. This coefficient is 1 in highly dense clustering, -1 in incorrect clustering and similar to zero when there is overlapping. Following this criteria we have chosen k as 2, because the silhouette coefficient takes the maximum value. 
+![Silhouette](Images/silhouette.png)
 
 
 ## 3. Execute K-means
@@ -24,6 +28,7 @@ We have selected random points method to choose the initial centroids. The data 
 Two clusters has been created whose main differences are:
 Temperatures:  Are slightly bigger in the cluster 2.
 Precipitations: There is a significant difference between both clusters, being much higher in the cluster 2. 
+![Random clustering results](Images/random_clustering.png)
 
 
 ## Authors
