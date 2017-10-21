@@ -28,11 +28,12 @@ average linkage. We have decided to use complete linkage because the single one 
 sensible to outliers, and our date has some of them, so the result is not descriptive.
 
 
-## 3. Cut the dendogram and characterize the obtained groups
+## 3. Cut the dendrogram and characterize the obtained groups
 After generating the dendrogram, we have determine the cut of the dendrogram to 5. Therefore, 
 we have obtained 14 clusters. The mean values of the different features in each cluster
 has been computed and can be shown in [results.csv](results.csv) (do not forget to
 select semicolon as separator when importing the data in Excel).
+![Obtained dendrogram](Images/dendrogram.png)
 
 Some of these clusters are very similar. Hence, we are going to group some of these clusters
 into bigger clusters. The final cluster list is:
@@ -54,3 +55,4 @@ We can visualize 5 different clusters on the image (numbered 1-5 from left to ri
 Also it is remarkable how there are two different clusters (on the opposite part of the graph) that both of them measures temperatures. One of the main reasons that this can occur is because the number one is measured in kelvin and the cluster number 5 is measured in Celsius degrees. 
 
 The cluster 3 makes sense because all the precipitation data is gathered. Another remarkable aspect is that the relative humidity feature is isolated, it is alone in the second cluster. Finally, the Satellite vegetation is gathered in one cluster (the number four). 
+![Dendrogram of the different features](Images/clustering_features.png)
