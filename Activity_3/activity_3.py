@@ -19,7 +19,8 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn import metrics
 
-def plotdata(data,labels,name): #def function plotdata
+#def function plotdata
+def plotdata(data,labels,name):
     fig, ax = plt.subplots()
     plt.scatter([row[0] for row in data], [row[1] for row in data], c=labels)
     ax.grid(True)
@@ -42,7 +43,7 @@ try:
             
             row = line.split(",")
             if row[0] == "sj":
-                if int(row[1])>=1990 and int(row[1])<=1996:
+                if int(row[1])>=1990 and int(row[1])<=1996: # select data between 1990 and 1996
                     if row != []:
                         row = row[4:]
                         cases.append(map(float, row))
