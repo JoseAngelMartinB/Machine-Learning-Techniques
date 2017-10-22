@@ -74,4 +74,3 @@ for c in range(1,n_clusters_+1):
             s = "%s,%s" % (s,numpy.mean(column))
     print s
 
-# Sacar numero de elementos de cada cluster
