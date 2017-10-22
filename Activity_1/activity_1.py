@@ -33,7 +33,7 @@ try:
             
             row = line.split(",")
             if row[0] == "sj":
-                if int(row[1])>=1990 and int(row[1])<=1996:
+                if int(row[1])>=1990 and int(row[1])<=1996:# select data between 1990 and 1996
                     if row != []:
                         row = row[4:]
                         cases.append(map(float, row))
