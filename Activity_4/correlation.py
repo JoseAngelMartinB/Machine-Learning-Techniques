@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
 Created on Thu Nov 2 2017
@@ -25,15 +26,12 @@ try:
 except:
     print("Error while loading the data")
     sys.exit()
-    
-    
-    
-    
+
 # Remove outliers 87, 139
 data = data.drop([87,139])
 
     
-# Correlation between features and total cases    
+### 2. Correlation between features and total cases    
 from scipy.stats.stats import pearsonr 
 corr = [pearsonr(data['ndvi_ne'], data['total_cases'])[0],
         pearsonr(data['ndvi_nw'], data['total_cases'])[0],
