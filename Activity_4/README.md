@@ -4,16 +4,19 @@
 For the study of the correlation between the features and the total cases we used the Pearson correlation coefficient which allows us to know the existing linear relationship between the different features with the total cases, in this way we will obtain a global vision of how the features are related, remember that a low relation does not imply that these features are not influential for the prediction only that they are not related in a linear way.
 
 In our case it can be observed how some features present a high correlation, the strongest being the features provided by the vegetationsatellite data, there are also quite weak relationships in the case of reanalysis_precip_amt_kg_per_m2 or
-reanalysis_relative_humidity_percent which indicates that there is no direct relationship between these features and the total cases
+reanalysis_relative_humidity_percent which indicates that there is no direct relationship between features and total cases
+
 ![Correlations](images/correlation.png)
 
 ## 2. Feature Selection
 This is the most critical part, since it will depend on it if our model is able to achieve more accurate predictions.
 
 In order to decide which features will be removed first we must help some graphics that provide us with knowledge of how our data are distributed, to study the data we will help density charts that provide us with information that allows us to discard features with a similar distribution , in our case this is very well appreciated in the graphics of ndvi_ne, ndvi_nw, ndvi_se and ndvi_sw from which we decided to eliminate all except ndvi_se that is also the feature that presents a greater correlation with the total cases.
+
 ![Density_Plot](images/Density_Plot.png)
 
 On the other hand we must also have account how our features are distributed in the clustering that we have just finished in which you can see how similar are the features and gives us that extra information with which to make choices of selection of features, such as deciding if we should stay with precipitation_amt_mm or choose station_precip_mm in representation of precipitation
+
 ![Clustering_features](images/clustering_features.png)
 
 
