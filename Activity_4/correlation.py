@@ -11,6 +11,7 @@ import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.stats.stats import pearsonr
 
 
 ### 1. Load the data asigned
@@ -31,8 +32,7 @@ except:
 data = data.drop([87,139])
 
     
-### 2. Correlation between features and total cases    
-from scipy.stats.stats import pearsonr 
+### 2. Correlation between features and total cases
 corr = [pearsonr(data['ndvi_ne'], data['total_cases'])[0],
         pearsonr(data['ndvi_nw'], data['total_cases'])[0],
         pearsonr(data['ndvi_se'], data['total_cases'])[0],
@@ -70,11 +70,7 @@ plt.show()
 
 
 #Density Plots
+data_density = data.drop(['city', 'year', 'weekofyear', 'week_start_date'], axis=1, inplace=True)
 data.plot(kind='density', subplots=True, layout=(6,4), sharex=False)
 plt.show()
 
-'''
-#Scatterplot matrix
-from pandas.tools.plotting import scatter_matrix
-scatter_matrix(data)
-plt.show()'''
