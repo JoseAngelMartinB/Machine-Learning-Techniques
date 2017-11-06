@@ -28,16 +28,19 @@ Through these mechanisms we will try to deduce together with the previously sele
 ![Cross_Validation](images/Cross_Validation.png)
 
 Feature Relevancies
-Feature                                  Relevance
--------------------------------------  -----------
-year                                      0
-weekofyear                                0.193232
-ndvi_se                                   0.806768
-reanalysis_max_air_temp_k                 0
-reanalysis_specific_humidity_g_per_kg     0
-station_max_temp_c                        0
-station_precip_mm                         0
 
+| Feature                               	| Relevance 	|
+|---------------------------------------	|-----------	|
+| year                                  	| 0         	|
+| weekofyear                            	| 0.0593644 	|
+| ndvi_se                               	| 0         	|
+| ndvi_sw                               	| 0.806768  	|
+| reanalysis_max_air_temp_k             	| 0         	|
+| reanalysis_air_temp_k                 	| 0.133868  	|
+| reanalysis_specific_humidity_g_per_kg 	| 0         	|
+| station_max_temp_c                    	| 0         	|
+| station_precip_mm                     	| 0         	|
+| reanalysis_sat_precip_amt_mm          	| 0         	|
 
 
 ## Authors
