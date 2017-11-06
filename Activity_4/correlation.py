@@ -33,26 +33,6 @@ data = data.drop([87,139])
 
     
 ### 2. Correlation between features and total cases
-corr = [pearsonr(data['ndvi_ne'], data['total_cases'])[0],
-        pearsonr(data['ndvi_nw'], data['total_cases'])[0],
-        pearsonr(data['ndvi_se'], data['total_cases'])[0],
-        pearsonr(data['ndvi_sw'], data['total_cases'])[0],
-        pearsonr(data['precipitation_amt_mm'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_air_temp_k'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_avg_temp_k'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_dew_point_temp_k'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_max_air_temp_k'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_min_air_temp_k'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_precip_amt_kg_per_m2'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_relative_humidity_percent'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_sat_precip_amt_mm'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_specific_humidity_g_per_kg'], data['total_cases'])[0],
-        pearsonr(data['reanalysis_tdtr_k'], data['total_cases'])[0],
-        pearsonr(data['station_avg_temp_c'], data['total_cases'])[0],
-        pearsonr(data['station_diur_temp_rng_c'], data['total_cases'])[0],
-        pearsonr(data['station_max_temp_c'], data['total_cases'])[0],
-        pearsonr(data['station_min_temp_c'], data['total_cases'])[0],
-        pearsonr(data['station_precip_mm'], data['total_cases'])[0]]
 
 features_names = ('ndvi_ne', 'ndvi_nw', 'ndvi_se', 'ndvi_sw', 'precipitation_amt_mm',
                   'reanalysis_air_temp_k', 'reanalysis_avg_temp_k', 'reanalysis_dew_point_temp_k',
@@ -60,8 +40,12 @@ features_names = ('ndvi_ne', 'ndvi_nw', 'ndvi_se', 'ndvi_sw', 'precipitation_amt
                   'reanalysis_relative_humidity_percent', 'reanalysis_sat_precip_amt_mm',
                   'reanalysis_specific_humidity_g_per_kg', 'reanalysis_tdtr_k', 'station_avg_temp_c',
                   'station_diur_temp_rng_c', 'station_max_temp_c', 'station_min_temp_c', 'station_precip_mm')
+
+corr = []
+for elm in features_names:
+    corr.append(pearsonr(data[elm], data['total_cases'])[0])
+
 y_pos = np.arange(len(features_names))
- 
 plt.bar(y_pos, corr, align='center', alpha=0.5)
 plt.xticks(y_pos, features_names, rotation='vertical')
 plt.ylabel('Correlation')
@@ -73,4 +57,3 @@ plt.show()
 data_density = data.drop(['city', 'year', 'weekofyear', 'week_start_date'], axis=1, inplace=True)
 data.plot(kind='density', subplots=True, layout=(6,4), sharex=False)
 plt.show()
-
