@@ -35,11 +35,11 @@ data = data.drop([87,139])
 
 
 ### 2. Feature selection
-features_names = ['year', 'weekofyear', 'ndvi_se',
-                 'reanalysis_max_air_temp_k',
-                 'reanalysis_specific_humidity_g_per_kg',
-                 'station_max_temp_c',
-                 'station_precip_mm']
+features_names = ['year', 'weekofyear',
+                  'ndvi_se', 'ndvi_sw',
+                  'reanalysis_max_air_temp_k', 'reanalysis_air_temp_k',
+                  'reanalysis_specific_humidity_g_per_kg', 'station_max_temp_c',
+                  'station_precip_mm', 'reanalysis_sat_precip_amt_mm']
 
 features = data[features_names]
 labels = data['total_cases']
