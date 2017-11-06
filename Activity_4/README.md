@@ -11,7 +11,7 @@ reanalysis_relative_humidity_percent which indicates that there is no direct rel
 ## 2. Feature Selection
 This is the most critical part, since it will depend on it if our model is able to achieve more accurate predictions.
 
-In order to decide which features will be removed first, we must use some graphics that provide us knowledge of how our data are distributed. To study the data we will be helped by density charts that provide us information that allows us to discard features with a similar distribution. In our case this is very well appreciated in the graphics of ndvi_ne, ndvi_nw, ndvi_se and ndvi_sw, from which we decided to eliminate all except ndvi_se and nvdi_sw. We have chosen this two because are the most representative from this type of features. As in the next iterations in the developing process of this project we will need to select some of them, the best approach right now is to have a pair of features  from each representative group.  This feature also presents a greater correlation with the total cases, as it has been seen in the first graph of this file. From this image, it is remarkable how all the precipitations density graphs follows the same distribution as the total number of cases. For selecting the two best features of precipitations, we will use the Clustering features graph described in this section.
+In order to decide which features will be removed first, we must use some graphics that provide us knowledge of how our data are distributed. To study the data we will be helped by density charts that provide us information that allows us to discard features with a similar distribution. In our case this is very well appreciated in the graphics of ndvi_ne, ndvi_nw, ndvi_se and ndvi_sw, from which we decided to eliminate all except ndvi_se and nvdi_sw. We have chosen this two because are the most representative from this type of features. As in the next iterations in the developing process of this project we will need to select some of them, the best approach right now is to have a pair of features  from each representative cluster that can be found in the Clustering features graph(generated in the ![Activity 2](../Activity_2)).  This feature also presents a greater correlation with the total cases, as it has been seen in the first graph of this file. From this image, it is remarkable how all the precipitations density graphs follows the same distribution as the total number of cases. For selecting the two best features of precipitations, we will use the Clustering features graph described in this section.
 
 ![Density_Plot](images/Density_Plot.png)
 
@@ -41,6 +41,7 @@ Feature Relevancies
 | station_max_temp_c                    	| 0         	|
 | station_precip_mm                     	| 0         	|
 | reanalysis_sat_precip_amt_mm          	| 0         	|
+
 
 
 ## Authors
