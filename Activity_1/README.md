@@ -24,6 +24,7 @@ mean dew point temperature, maximum air temperature and minimum air temperature
 respectively. All these features are measured by the NOAA's NCEP System and has 
 in common that are temperatures and by consequence the correlation coefficient 
 is one.
+
 ![Correlation among features](Images/correlation.png)
 
 
@@ -40,4 +41,5 @@ Once the PCA has been executed, the results has been plotted. There, two
 outliers can be clearly observed. They correspond with the rows 141 and 89 of
 the data file. This is due to the fact that they do not have enough features
 (maybe due to a bad data recopilation).
+
 ![PCA results](Images/PCA.png)
