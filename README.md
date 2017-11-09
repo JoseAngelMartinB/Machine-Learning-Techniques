@@ -7,6 +7,7 @@ Git repository for the laboratory part of the subject Machine Learning Technique
 - [Activity 2 - Hierarchical Clustering](Activity_2/)
 - [Activity 3 - K-means](Activity_3/)
 - [Activity 4 - Decision Trees for Regression](Activity_4/)
+- [Activity 5 - Feature Engineering](Activity_5/)
 
 ## Software
 The scripts presented in this repository has been coded using Python 2.7. 
