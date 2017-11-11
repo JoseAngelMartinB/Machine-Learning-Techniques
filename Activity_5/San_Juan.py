@@ -113,3 +113,8 @@ for i in range(0, len(features_names)):
     print("\t{0:38s} ==> {1:8f}".format(features_names[i], corr[i]))
 
 ### 4. Feature selection
+
+features_names = []
+
+features = data[features_names]
+labels = data['total_cases']
