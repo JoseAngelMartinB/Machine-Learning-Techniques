@@ -122,7 +122,12 @@ plt.show()
 
 ### 4. Feature selection
 
-features_names = []
+features_names = ['year', 'weekofyear',
+                  'reanalysis_dew_point_temp_k', 'reanalysis_min_air_temp_k',
+                  'station_diur_temp_rng_c', 'reanalysis_tdtr_k',
+                  'reanalysis_specific_humidity_g_per_kg', 'station_avg_temp_c',
+                  'reanalysis_relative_humidity_percent',
+                  'precipitation_amt_mm', 'reanalysis_precip_amt_kg_per_m2']
 
 features = data[features_names]
 labels = data['total_cases']
