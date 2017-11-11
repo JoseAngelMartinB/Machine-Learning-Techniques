@@ -15,6 +15,7 @@ import sklearn
 
 from sklearn import preprocessing, decomposition
 from scipy import cluster
+from scipy.stats.stats import pearsonr
 
 
 ### 0. Load the data asigned
@@ -88,5 +89,27 @@ plt.show()
 
 ### 3. Correlation between features and total cases
 
+features_names = ('ndvi_ne', 'ndvi_nw', 'ndvi_se', 'ndvi_sw', 'precipitation_amt_mm',
+                  'reanalysis_air_temp_k', 'reanalysis_avg_temp_k', 'reanalysis_dew_point_temp_k',
+                  'reanalysis_max_air_temp_k', 'reanalysis_min_air_temp_k', 'reanalysis_precip_amt_kg_per_m2',
+                  'reanalysis_relative_humidity_percent', 'reanalysis_sat_precip_amt_mm',
+                  'reanalysis_specific_humidity_g_per_kg', 'reanalysis_tdtr_k', 'station_avg_temp_c',
+                  'station_diur_temp_rng_c', 'station_max_temp_c', 'station_min_temp_c', 'station_precip_mm')
+
+corr = []
+for elm in features_names:
+    corr.append(pearsonr(data[elm], data['total_cases'])[0])
+
+y_pos = np.arange(len(features_names))
+plt.bar(y_pos, corr, align='center', alpha=0.5)
+plt.xticks(y_pos, features_names, rotation='vertical')
+plt.ylabel('Correlation')
+plt.title('Correlation features vs total cases - San Juan')
+plt.subplots_adjust(top=0.95, bottom=0.45)
+plt.show()
+
+print("\nCorrelation between features and total cases:")
+for i in range(0, len(features_names)):
+    print("\t{0:38s} ==> {1:8f}".format(features_names[i], corr[i]))
 
 ### 4. Feature selection
