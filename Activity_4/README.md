@@ -44,6 +44,8 @@ Feature Relevancies
 
 For the evaluation we have split the data into two subsets various times: train and test. With the results we have received from this evaluations we apply an average on the predictions giving as result the estimation of the error. As we just have mentioned in this document, our best max_depth value is 2.
 
+![Tree](images/tree.dot.pdf)
+
 ## Authors
 * José Ángel Martín Baos
 * Oscar Pérez Galán

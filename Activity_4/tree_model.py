@@ -14,6 +14,8 @@ from sklearn.tree import DecisionTreeRegressor
 from tabulate import tabulate
 import matplotlib.pyplot as plt
 from sklearn.model_selection import cross_val_score
+import graphviz
+from sklearn.tree import export_graphviz
 
 
 ### 1. Load the data asigned
@@ -57,6 +59,12 @@ print 'Feature Relevancies'
 list1 = zip(features, regressor.feature_importances_)
 print tabulate(list1, headers=['Feature', 'Relevance'])
 
+# Model Visualization
+dot_data = export_graphviz(regressor, out_file='tree.dot', feature_names=features_names,
+                           filled=True, rounded=True)
+graph = graphviz.Source.from_file('tree.dot')
+graph.render()
+
 # Cross validation analysis
 total_scores = []
 for i in range(2, 30):
@@ -69,4 +77,4 @@ for i in range(2, 30):
 plt.plot(range(2,30), total_scores, marker='o')
 plt.xlabel('max_depth')
 plt.ylabel('cv score')
-plt.show()    
+plt.show()
