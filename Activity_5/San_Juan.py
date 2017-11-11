@@ -112,6 +112,8 @@ print("\nCorrelation between features and total cases:")
 for i in range(0, len(features_names)):
     print("\t{0:38s} ==> {1:8f}".format(features_names[i], corr[i]))
 
+
+
 ### 4. Feature selection
 
 features_names = []
