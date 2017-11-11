@@ -112,6 +112,12 @@ print("\nCorrelation between features and total cases:")
 for i in range(0, len(features_names)):
     print("\t{0:38s} ==> {1:8f}".format(features_names[i], corr[i]))
 
+#Density Plots
+data_density = data.drop(['city', 'year', 'weekofyear', 'week_start_date', 'total_cases'], 1)
+data_density.plot(kind='density', subplots=True, layout=(5,4), sharex=False)
+plt.subplots_adjust(top=0.95, bottom=0.05, left=0.05, right=0.95)
+plt.show()
+
 
 
 ### 4. Feature selection
