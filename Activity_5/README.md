@@ -21,7 +21,13 @@ For Iquito data, the chosen cut is 9 as well, with a total of 5 clusters.
 ![Iquitos Features_Clustering](images/Iquitos-Features_clustering.png)
 
 ## 3. Correlation between features and total cases
+Once known how clusters are grouped we have to start studying the correlations between these and the total cases, for that we select all the features and apply a Pearson correlation with which we will obtain a graph that allows us to distinguish the direct relationship between the features and the total cases, as was done in activity 4, this is the result for San Juan:
 
+As expected, the most important features of activity 4 continue to be important when analyzing all the data. we see for example the importance that the satellite of vegetation continues to have.
+![San Juan Correlation](images/San_Juan-Correlation.png)
+
+In the case of Iquitos, we see how the datas collected by the vegetation satellites are not relevant.
+![Iquitos Correlation](images/Iquitos-Correlation.png)
 
 ## 4. Feature selection
 
