@@ -14,8 +14,10 @@ import matplotlib.pyplot as plt
 import sklearn
 
 from sklearn import preprocessing, decomposition
+from sklearn.tree import DecisionTreeRegressor
 from scipy import cluster
 from scipy.stats.stats import pearsonr
+from tabulate import tabulate
 
 
 ### 0. Load the data asigned
@@ -122,12 +124,45 @@ plt.show()
 
 ### 4. Feature selection
 
+# First feature selection
 features_names = ['year', 'weekofyear',
                   'reanalysis_dew_point_temp_k', 'reanalysis_max_air_temp_k',
                   'reanalysis_relative_humidity_percent',
                   'reanalysis_precip_amt_kg_per_m2', 'reanalysis_sat_precip_amt_mm',
                   'ndvi_se', 'ndvi_sw',
                   'reanalysis_specific_humidity_g_per_kg', 'station_avg_temp_c']
+features = data[features_names]
+labels = data['total_cases']
+
+# Cross validation analysis
+from sklearn.model_selection import cross_val_score
+total_scores = []
+for i in range(2, 30):
+    regressor = DecisionTreeRegressor(criterion='mse', max_depth=i)
+    regressor.fit(features, labels)
+    scores = -cross_val_score(regressor, features,
+            labels, scoring='neg_mean_absolute_error', cv=10)
+    total_scores.append(scores.mean())
+
+plt.plot(range(2,30), total_scores, marker='o')
+plt.xlabel('max_depth')
+plt.ylabel('cv score')
+plt.show()
+
+# Print features relevancies
+print 'Feature Relevancies'
+regressor = DecisionTreeRegressor(criterion='mse', max_depth=2, random_state=0)
+regressor.fit(features, labels)
+list1 = zip(features, regressor.feature_importances_)
+print tabulate(list1, headers=['Feature', 'Relevance'])
+
+# Second feature selection
+features_names = ['year', 'weekofyear',
+                  'reanalysis_dew_point_temp_k',
+                  'reanalysis_relative_humidity_percent',
+                  'reanalysis_precip_amt_kg_per_m2',
+                  'ndvi_se',
+                  'reanalysis_specific_humidity_g_per_kg']
 
 features = data[features_names]
 labels = data['total_cases']
