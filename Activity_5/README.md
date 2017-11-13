@@ -52,7 +52,9 @@ With the decisions made so far we have made an important selection of the featur
 For each case it is necessary to do the calculation of the max depth, which will be the one that gives us some values of the precise features and without overfitting.
 
 In the case of San Juan, we have been able to verify that according to our new criterion of the two features of vegetation satellite cluster we only need the feature ndvi_se, since for ndvi_sw the relevance is 0.
+
 ![Second Feature Selection SJ](images/Second_Feature_SelectionSJ.png)
+
 In the case of Iquitos we can see that within the third cluster starting from the left the features reanalysis_specific_humidity_g_per_kg and station_avg_temp_c have a relevance greater than 0 but the relevance of station_avg_temp_c is greater than that of humidity therefore, we chose the feature station_avg_temp_c.
 
 ![Second Feature Selection IQ](images/Second_Feature_SelectionIQ.png)
