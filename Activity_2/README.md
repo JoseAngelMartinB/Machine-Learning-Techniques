@@ -36,13 +36,13 @@ select semicolon as separator when importing the data in Excel).
 ![Obtained dendrogram](Images/dendrogram.png)
 
 Some of these clusters are very similar. Hence, we are going to group some of these clusters
-into bigger clusters. The final cluster list is:
+into bigger clusters. The final cluster list is (Only the clusters with relevant features will be commented):
 * Cluster A (Group 1): Outliers that only have data from the Satellite vegetation.
 * Cluster B (Group 2 and 3): They form a group because they have some features very similar
 such as ndvi\_ne, ndvi\_nw, ndvi\_se and ndvi\_sw.
 * Cluster C (Group 4, 5 and 6): They are related because of some features such as: ndvi\_se,
 ndvi\_sw.
-* Cluster D (Group 7, 8, 9, 10 and 11): Nothing relevant has been found. 
+* Cluster D (Group 7, 8, 9, 10 and 11).
 * Cluster E (Group 12, 13, 14): This cluster is very different to the other ones because they
 have high precipitation values.
 
