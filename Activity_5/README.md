@@ -3,11 +3,11 @@
 ## 1. Identify outliers
 The first thing we should consider in this new phase of our project is to identify and eliminate outliers as we did in ![activity 1](../Activity_1). To achieve this we must remember that once we have the data loaded and normalized, we must make a PCA estimate that shows us a graphic form in 2 dimensions which shows us the outliers.
 
-If we perform this process with San Juan's data, now with all the data on loaded, we can easily see in the graph which are the outliers. For this case would be 89,141,401,453,713 and 765, which will be eliminated to continue with the procedure.
+If we perform this process with San Juan's data, now with all the data on loaded, we can easily see in the graph which are the outliers. For this case would be 89,141,401,453,713 and 765, caused because they have missing data. Therefore, they will be eliminated to continue with the procedure.
 
 ![San Juan PCA](images/San_Juan-PCA.png)
 
-The same scheme will be followed to analyze the data of Iquitos, obtaining the following outliers: 184,236,444 and 496.
+The same scheme will be followed to analyze the data of Iquitos, obtaining the following outliers: 184,236,444 and 496. As in the previous city, they are caused by missing data. 
 
 ![Iquitos PCA](images/Iquitos-PCA.png)
 
