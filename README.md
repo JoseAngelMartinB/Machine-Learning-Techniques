@@ -10,6 +10,7 @@ Then, what is dengue? Dengue is fast pandemic viral disease that is present in d
 - [Activity 3 - K-means](Activity_3/)
 - [Activity 4 - Decision Trees for Regression](Activity_4/)
 - [Activity 5 - Feature Engineering](Activity_5/)
+- [Activity 6 - Predictive Model Building](Activity_6/)
 
 ## Software
 The scripts presented in this repository has been coded using Python 2.7. 
