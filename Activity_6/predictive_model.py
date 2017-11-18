@@ -121,7 +121,7 @@ plt.show()
 # San Juan
 data_features_test_sj = data_features_test.loc[data_features_test['city'] == 'sj']
 
-n_neighbors = 10
+n_neighbors = 35
 weights = 'uniform'
 
 knn = neighbors.KNeighborsRegressor(n_neighbors=n_neighbors, weights=weights, p=2)
