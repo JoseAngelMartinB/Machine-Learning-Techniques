@@ -1,37 +1,38 @@
 # Activity 6. Predictive Model Building
-At this point of development, it is time to start predicting, previously we have done a data analysis work to see how they are grouped and related together with a selection of features according to the criteria we have considered appropriate.
+At this point of development, it is time to start predicting. Previously on this repository we have developed a data analysis work to see how they are grouped and related together with a selection of features, according to the criteria we have considered most appropriate.
 
 ## Missing Values
-The first thing to consider is that values ​​of our data set are useful, therefore if we look at the data we can see how some of them do not present any field with data, or have little data. With this information we have decided that it can be really useful to do an interpolation of the data, getting no empty field, therefore we will get a better approximation to the reality of the data and be able to carry out a better analysis of them and therefore a better prediction.
+The first thing to consider is that values ​​of our data set are useful. Therefore, if we look at the data we can see how some of them have incomplete data or even are empty, without any record in any feature. With this information, we have decided that it can be really useful to do an interpolation of the data, getting no empty fields. Therefore we will get a better approximation to the reality of the data we are working on. Also, being able to carry out a better analysis and therefore a better final prediction.
 
-we have to remember that as we saw, we had outliers and now they have data, but as we believe that they are going to make the analysis worse, since they are fictitious data that do not reflect the reality then we are going to eliminate them.
+At his point we have to remember that, as we saw, we had the outliers but now they have been completed with records. But some of the empty data corresponds to a set of dates that has less information. By consequence, this subset is calculated with less source data and it will be considered as outliers. To avoid having a bad analysis, since this subset is a fictitious data (it does not reflect the reality) we are going to eliminate them.
 
 
 
 ## Feature Selection
-The selection of features is the same as we chose in activity 5, so there is no modification here.
+The selection of features is the same as we have chosen in ![activity 5](../Activity_5), so there is no modification in this README.
 
 
 
 ## Parametrization
-Once we have the clear data and features, we must parameterize the data according to some criteria, for this occasion we have decided not to normalize the data, since by doing tests we have seen that the CV value is better without normalization, which can mean that the selection of features is not entirely correct
+Once we have the clear data and features, we must parameterize the data according to some criteria. For this occasion we have decided not to normalize the data, since by doing tests we have seen that the CV value is better without normalization. This means that the selection of features is not entirely correct.
 
-The cross validation analysis is performed with 2 values for weights (uniform and distance), where we will use the Neighbors-based regression model, once both weights are finished, we can see the CV values obtained, observing a better result using uniform, as we see for the case of San Juan,in which we see that the best CV value is reached when the number of neighbors is 35.
+The cross validation analysis is performed with 2 values for weights (uniform and distance), where we will use the Neighbors-based regression model. Once both weights are finished, we can see the CV values obtained. Observing a better result using uniform, as we see for the case of San Juan in which we see that the best CV value is reached when the number of neighbors is 35.
 ![sanJuan cv scores](images/sanJuan_cv_scores.png)
 
-Or in the case of Iquitos,that reaches its best CV when a neighbor value equal to 18 is used.
+On the other hand, in the case of Iquitos, reaches its best CV when a neighbor value equals to 18.
 ![iquitos cv scores](images/iquitos_cv_scores.png)
 
 
 ## Execute kNN and make predictions
-We already know the best number of neighbors for each case and the best weight, so that we can start making predictions based on those values obtained previously, so we execute the KNN and we make the prediction of the features of each city with the labels of each.
+We already know the best number of neighbors for each case and the best weight. So we can start making predictions based on those values obtained previously. First of all we execute the KNN and we make the prediction of the features of each city with their corresponding labels.
 
-The predictions will be rounded to avoid losing information, and once completed they will be saved in the file result.to_csv.
+The predictions will be rounded to avoid losing information and once it is completed, they will be saved in the file result.to_csv.
 
 ## Participating in the competition
-Once the predictions are finished and we have obtained the result csv file, we are ready to start participating in the competition, so we have done a test to be able to orient ourselves and consider possible modifications on our decisions.
+Once the predictions are finished and we have obtained the result csv file, we are ready to start participating in the competition.
+For being able to orient ourselves and consider possible modifications on our decisions, the team has decided to submit this resulting csv file.
 
-After uploading the file to the competition this was our score:
+After uploading the file to the driven-data [competition](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/) this was our score:
 ![dengAI score](images/dengAI_score.png)
 
 ## Authors
