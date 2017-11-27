@@ -1,7 +1,9 @@
 # Machine Learning Techniques - Predicting Dengue Disease Spread
 In this repository we will use Machine Learning Techniques for studying the problem of Dengue in South America. But, first of all: What is Machine Learning? Machine Learning is the use of artificial intelligence for giving the ability to learn and improve from different sources of data. 
 
-Then, what is dengue? Dengue is fast pandemic viral disease that is present in different parts of the world, that is spread through mosquitoes. In our case, this project is focused in the data of two cities of South America. We will study the different climate registers of San Juan (Puerto Rico) and Iquitos (Peru). In this repository you will find different activities related to the subject of Machine Learning Techniques, organized in folders. Also, this git repository contains all the necessary code to complete the Driven Data [competition](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/) about this topic. This Driven Data competition want us to predict the disease spread by studying previous data given by them.
+Then, what is dengue? Dengue fever is fast pandemic viral disease that occurs in tropical and sub-tropical parts of the world and which is spread through mosquitoes. As it is carried by mosquitoes, the transmission dynamics of the dengue are related to climate variables such us temperature and precipitation.
+
+In our case, this project is focused in the data of two cities of South America. We will study the different climate registers of San Juan (Puerto Rico) and Iquitos (Peru). We hypothesize that in each city, the pattern dengue follows can change, therefore, we will split both cities. In this repository you will find different activities related to the subject of Machine Learning Techniques, organized in folders. Also, this git repository contains all the necessary code to complete the Driven Data [competition](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/) about this topic. This Driven Data competition want us to predict the disease spread by studying previous data given by them.
 
 
 ## Activities
