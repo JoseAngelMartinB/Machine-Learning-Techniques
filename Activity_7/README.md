@@ -8,7 +8,7 @@ In this last activity we will carry out improvements on what is known so far, we
 
 # Back-Testing 
 
-This are local tests is made to a subset of the our data. The division we have made has two subsets, one for training and other one for testing. With this method we are able to predict our own data. Even we already know the accurate result, the goal of this section is to verify that our predictions are correct. 
+In general terms, is the process of testing a strategy before implementing it. It allows us to know if the approach we are using is correct or not.  To accomplish this function we work with our local data. We have made a division in two subsets, one for training and other one for testing. The selection is different between the cities, and it has been proportional. With this method we are able to predict our own data. Even we already know the accurate result, the goal of this section is to verify that our predictions are correct. 
 
 # Decisions in the data
 
