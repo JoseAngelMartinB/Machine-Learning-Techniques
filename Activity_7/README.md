@@ -15,9 +15,11 @@ In general terms, is the process of testing a strategy before implementing it. I
 # New selection of features
 As we said, we are going to try to improve our results, so it is necessary to see where the prediction problems are, one of the most important is the study and selection of the features.
 
-If we observe the set of features we obtained in activity 6, we observe that the number of fatures is quite high, this can be a problem since the less relevant features could generate noise in the study of the set of features. For this reason we have taken the decision to leave a single representative for each cluster, the criterion for selecting the feature is to choose the feature with greater relevance within each subset, so that we would obtain the next selection of features.
+If we observe the set of features we obtained in activity 6 for Iquitos, we observe that the number of fatures is quite high, this can be a problem since the less relevant features could generate noise in the study of the set of features. For this reason we have taken the decision to eliminate some features based on their relevance, so that even if some clusters are left without a representative feature, this is the way to reduce that noise, and therefore the improvement we were looking for.
 
 ![New Selection Features](images/NewFeaturesSelection.png)
+
+One of the features that was in both sets has been the "year", this feature generates a high distortion in the data, and really is not a feature that helps predict better, therefore it has been eliminated from multiple sets of features.
 
 This new set of features more reduced should be able to eliminate the problem we had of noise between features, and help us improve with our predictions
 
