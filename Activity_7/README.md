@@ -5,6 +5,13 @@ This will be our final part of the project, as we have seen in previous activiti
 
 In this last activity we will carry out improvements on what is known so far, we will also discuss new approaches that help us with these improvements
 
+
+# Back-Testing 
+
+# Decisions in the data
+
+# Others Algorithms
+
 # New selection of features
 As we said, we are going to try to improve our results, so it is necessary to see where the prediction problems are, one of the most important is the study and selection of the features.
 
