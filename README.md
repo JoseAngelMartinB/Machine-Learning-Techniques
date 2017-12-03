@@ -13,6 +13,7 @@ In our case, this project is focused in the data of two cities of South America.
 - [Activity 4 - Decision Trees for Regression](Activity_4/)
 - [Activity 5 - Feature Engineering](Activity_5/)
 - [Activity 6 - Predictive Model Building](Activity_6/)
+- [Activity 7 - Submission](Activity_7/)
 
 ## Software
 The scripts presented in this repository has been coded using Python 2.7. 
