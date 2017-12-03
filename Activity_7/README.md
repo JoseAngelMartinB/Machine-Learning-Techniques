@@ -8,6 +8,8 @@ In this last activity we will carry out improvements on what is known so far, we
 
 # Back-Testing 
 
+This are local tests is made to a subset of the our data. The division we have made has two subsets, one for training and other one for testing. With this method we are able to predict our own data. Even we already know the accurate result, the goal of this section is to verify that our predictions are correct. 
+
 # Decisions in the data
 
 # Others Algorithms
@@ -35,7 +37,7 @@ In the tests we have determined that the best number of estimators for our data 
 
 In the case of Iquitos, it will remain the same as activity 6, except that now we carry out a normalization on the data, this normalization we believe it necessary since we have data of different measurement scales, therefore, we will do the normalization with MaxAbsScaler,and to applying a transform to the data to avoid dispersion.
 
-we will also modify the weight parameter by "distance", which is the one with which we obtained a better result.
+We will also modify the weight parameter by "distance", which is the one with which we obtained a better result.
 
 # New submissions results
 Now we just have to save the predictions made on a .csv file and submit the competition to see our new score and see if we really have improved.
