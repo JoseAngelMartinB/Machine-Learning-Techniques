@@ -16,8 +16,6 @@ In general terms, is the process of testing a strategy before implementing it. I
 ![Predicted cases](images/Predicted_cases.png)
 
 
-# Others Algorithms
-
 # New selection of features
 As we said, we are going to try to improve our results, so it is necessary to see where the prediction problems are, one of the most important is the study and selection of the features.
 
@@ -34,16 +32,20 @@ This approach raises the problem that we should not work with the whole set of d
 
 ![Last Yeras Selection](images/LastYears.png)
 
-In order to make a decision when establishing a cut, arbitrary for the moment, when we perform the back-testing we will verify which cut is better for the data,that once done, we obtain a cut value of 650 for San Juan and 300 for Iquitos.
+To solve this problem we make a selection of the last data of each set, which as we have seen in our tests, would be the last 650 data of San Juan and the last 300 of Iquitos.
 
-# Training and predicting
-After the successive modifications applied to the set of data, we have to train and make predictions, but we are also going to make some changes in this section, the first one will change the classifier for the San Juan data set, choosing for it the Random Forest, since after tests on the obtained results we have seen that this type of classifier provides better results.
+This has been one of the key improvements to reduce the error when predicting, demonstrating that effectively the first data generate worse results and cause distortion.
 
-In the tests we have determined that the best number of estimators for our data is 50, if we increase this value it would surely improve the prediction, but it would do so minimally and since we have established a depth of None, then this would cause a consumption of memory too high, the depth has the value None since we let the algorithm have overfitting, which for the San Juan values cause a better result.
+# Algortihm changes
+After the successive modifications applied to the set of data, we have to train and make predictions, but we are also going to make some changes in this section,depending on the city.
 
-In the case of Iquitos, it will remain the same as activity 6, except that now we carry out a normalization on the data, this normalization we believe it necessary since we have data of different measurement scales, therefore, we will do the normalization with MaxAbsScaler,and to applying a transform to the data to avoid dispersion.
+San Juan modifications:
 
-We will also modify the weight parameter by "distance", which is the one with which we obtained a better result.
+The first one will change the classifier for the San Juan data set, choosing for it the Random Forest, since after tests on the obtained results we have seen that this type of classifier provides better results,in the tests we have determined that the best number of estimators for our data is 50, if we increase this value it would surely improve the prediction, but it would do so minimally and since we have established a depth of None, then this would cause a consumption of memory too high, the depth has the value None since we let the algorithm have overfitting, which for the San Juan values cause a better result.
+
+Iquitos modifications:
+
+In the case of Iquitos, it will remain the same as activity 6, except that now we carry out a normalization on the data, this normalization we believe it necessary since we have data of different measurement scales, therefore, we will do the normalization with MaxAbsScaler,and to applying a transform to the data to avoid dispersion.We will also modify the weight parameter by "distance", which is the one with which we obtained a better result.
 
 # New submissions results
 Now we just have to save the predictions made on a .csv file and submit the competition to see our new score and see if we really have improved.
