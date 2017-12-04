@@ -10,8 +10,7 @@ In this last activity we will carry out improvements on what is known so far, we
 
 In general terms, is the process of testing a strategy before implementing it. It allows us to know if the approach we are using is correct or not.  To accomplish this function we work with our local data. We have made a division in two subsets, one for training and other one for testing. The selection is proportional to the data we have from each city. That is the reason the subset of training is bigger in San Juan than Iquitos, due to we have more records of the first city. With this method we are able to predict our own data. Even we already know the accurate result, the goal of this section is to verify that our predictions are correct. 
 
-
-....
+With the algorithms used and trained in the back-testing, we have made a prediction over the whole dataset. The predicted results and the real dengue cases for San Juan and Iquitos can be shown in the following image.
 
 ![Predicted cases](images/Predicted_cases.png)
 
