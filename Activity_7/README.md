@@ -12,8 +12,8 @@ In this last activity we will carry out improvements on what is known so far, we
 
 Some of this improvements are going to be explained.
 
-# Back-Testing 
-In general terms, is the process of testing a strategy before implementing it. It allows us to know if the approach we are using is correct or not.  To accomplish this function we work with our local data. We have made a division in two subsets, one for training and other one for testing. The selection is proportional to the data we have from each city. That is the reason the subset of training is bigger in San Juan than Iquitos, due to we have more records of the first city. With this method we are able to predict our own data. Even we already know the accurate result, the goal of this section is to verify that our predictions are correct. 
+# Back-Testing
+In general terms, is the process of testing a strategy before implementing it. It allows us to know if the approach we are using is correct or not.  To accomplish this function we work with our local data. We have made a division in two subsets, one for training and other one for testing. The selection is proportional to the data we have from each city. That is the reason the subset of training is bigger in San Juan than Iquitos, due to we have more records of the first city. With this method we are able to predict our own data. Even we already know the accurate result, the goal of this section is to verify that our predictions are correct.
 
 With the algorithms used and trained in the back-testing, we have made a prediction over the whole dataset. The predicted results and the real dengue cases for San Juan and Iquitos can be shown in the following image.
 
@@ -23,7 +23,7 @@ With the algorithms used and trained in the back-testing, we have made a predict
 # New selection of features
 As we said, we are going to try to improve our results, so it is necessary to see where the prediction problems are. One of the most relevant factors for predictions is the study and selection of the features.
 
-If we observe the set of features we obtained in activity 6 for Iquitos, we observe that the number of fatures is quite high. This can be a problem since the less relevant features could generate noise in the study of the set of features. For this reason we have taken the decision to eliminate some features based on their relevance, even if some cluster groups of features generated in previous activities are left without a representative feature. In this way we can reduce that noise, and therefore get the improvement we were looking for.
+If we observe the set of features we obtained in activity 6 for Iquitos, we observe that the number of features is quite high. This can be a problem since the less relevant features could generate noise in the study of the set of features. For this reason we have taken the decision to eliminate some features based on their relevance, even if some cluster groups of features generated in previous activities are left without a representative feature. In this way we can reduce that noise, and therefore get the improvement we were looking for.
 
 ![New Selection Features](images/NewFeaturesSelection.png)
 
@@ -43,11 +43,11 @@ After the successive modifications applied to the set of data, we have to train 
 
 San Juan modifications:
 
-The first one will change the classifier for the San Juan data set, choosing for it the Random Forest, since after tests on the obtained results we have seen that this type of classifier provides better results. In the tests we have determined that the best number of estimators for our data is 50, if we increase this value, the prediction might be improve, but the computational cost will be too big. Moreover, since we have established the maximun depth to None (in order to allow each of the individual trees to overfit), then the memory comsumption will be too high.
+The first one will change the classifier for the San Juan data set, choosing for it the Random Forest, since after tests on the obtained results we have seen that this type of classifier provides better results. In the tests we have determined that the best number of estimators for our data is 50, if we increase this value, the prediction might be improve, but the computational cost will be too big. Moreover, since we have established the maximum depth to None (in order to allow each of the individual trees to overfit), then the memory consumption will be too high.
 
 Iquitos modifications:
 
-In the case of Iquitos, it will remain the same as activity 6, except that now we carry out a normalization on the data. We believe that this normalization is necessary since we have data with different measurement scales. Therefore, we will execute a normalization process using the MaxAbsScaler. We will also modify the weight scheeme parameter to "distance", which is the one with which we obtained a better result.
+In the case of Iquitos, it will remain the same as activity 6, except that now we carry out a normalization on the data. We believe that this normalization is necessary since we have data with different measurement scales. Therefore, we will execute a normalization process using the MaxAbsScaler. We will also modify the weight scheme parameter to "distance", which is the one with which we obtained a better result.
 
 # New submissions results
 Now we just have to save the predictions made on a .csv file and submit the competition to see our new score and see if we really have improved.
@@ -55,5 +55,5 @@ Now we just have to save the predictions made on a .csv file and submit the comp
 
 ## Authors
 * José Ángel Martín Baos
-* Oscar Pérez Galán
+* Óscar Pérez Galán
 * Miguel Ampuero López-Sepúlveda
