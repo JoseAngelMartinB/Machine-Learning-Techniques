@@ -95,9 +95,9 @@ data_features_test_sj = data_features_test_sj.assign(total_cases = pred_sj)
 data_features_test_iq = data_features_test.loc[data_features_test['city'] == 'iq']
 
 # Normalization of the data
-min_max_scaler = preprocessing.MaxAbsScaler()
-data_features_test_iq_norm = min_max_scaler.fit_transform(data_features_test_iq[features_selected_iq])
-features_iq_norm = min_max_scaler.fit_transform(features_iq)
+max_abs_scaler = preprocessing.MaxAbsScaler()
+data_features_test_iq_norm = max_abs_scaler.fit_transform(data_features_test_iq[features_selected_iq])
+features_iq_norm = max_abs_scaler.fit_transform(features_iq)
 
 # Parametrization
 n_neighbors = 18

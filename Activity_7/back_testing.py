@@ -93,9 +93,9 @@ bt_test_labels_iq = bt_test_subset_iq['total_cases']
 
 '''
 # Normalization of the data
-min_max_scaler = preprocessing.MaxAbsScaler()
-bt_train_features_sj = min_max_scaler.fit_transform(bt_train_features_sj)
-bt_test_sj = min_max_scaler.fit_transform(bt_test_sj)
+max_abs_scaler = preprocessing.MaxAbsScaler()
+bt_train_features_sj = max_abs_scaler.fit_transform(bt_train_features_sj)
+bt_test_sj = max_abs_scaler.fit_transform(bt_test_sj)
 '''
 
 # Random Forest
@@ -137,9 +137,9 @@ bt_pred_sj = [int(round(x)) for x in regressor_sj.predict(bt_test_sj)]
 ## Iquitos
 
 # Normalization of the data
-min_max_scaler = preprocessing.MaxAbsScaler()
-bt_train_features_iq = min_max_scaler.fit_transform(bt_train_features_iq)
-bt_test_iq = min_max_scaler.fit_transform(bt_test_iq)
+max_abs_scaler = preprocessing.MaxAbsScaler()
+bt_train_features_iq = max_abs_scaler.fit_transform(bt_train_features_iq)
+bt_test_iq = max_abs_scaler.fit_transform(bt_test_iq)
 
 # Knn
 n_neighbors = 18
@@ -202,7 +202,7 @@ data_sj_plt.total_cases.plot(ax=axes[0], label="Actual")
 # Plot Iquitos
 axes[1].set_title("Iquitos")
 data_iq_plt = data.loc[(data['city'] == 'iq')]
-data_iq_plt = data_iq_plt.assign(pred = regressor_iq.predict(min_max_scaler.fit_transform(data_iq_plt[features_selected_iq])))
+data_iq_plt = data_iq_plt.assign(pred = regressor_iq.predict(max_abs_scaler.fit_transform(data_iq_plt[features_selected_iq])))
 data_iq_plt.pred.plot(ax=axes[1], label="Predictions")
 data_iq_plt.total_cases.plot(ax=axes[1], label="Actual")
 
