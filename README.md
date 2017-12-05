@@ -21,12 +21,16 @@ In our case, this project is focused in the data of two cities of South America.
 ## Software
 The scripts presented in this repository has been coded using Python 2.7.
 Some libraries are also necessary in order to run these scripts, such as:
+```
 * Numpy
 * Scipy
 * Pylab
 * Seaborn
 * Matplotlib
 * Sklearn
+* Tabulate
+* Pandas
+```
 
 ## Authors
 * José Ángel Martín Baos
